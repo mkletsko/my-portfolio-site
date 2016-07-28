@@ -1,0 +1,25 @@
+/* effects for header and nav when scroll page  */
+header .header-main-animate {
+  background-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.239216) 0px 0px 2px;
+          box-shadow: rgba(0, 0, 0, 0.239216) 0px 0px 2px;
+  -webkit-transition: background 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: background 0.5s ease, -webkit-box-shadow 0.5s ease;
+  transition: box-shadow 0.5s ease, background 0.5s ease;
+  transition: box-shadow 0.5s ease, background 0.5s ease, -webkit-box-shadow 0.5s ease;
+}
+header .header-main-animate nav .navigation li.nav-link a {
+  color: #5fd080;
+}
+header .header-main-animate nav .navigation li.nav-link a:hover {
+  color: black;
+}
+/* END effects for header and nav when scroll page */
+.download-cv-animate {
+  border: 1px solid #67cc82;
+  color: #67cc82;
+}
+.download-cv-animate:hover {
+  border: 1px solid black;
+  color: black;
+}

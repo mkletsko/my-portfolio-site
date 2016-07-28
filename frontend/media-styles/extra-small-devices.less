@@ -1,0 +1,141 @@
+@screen-xs-min: 320px;
+@screen-sm-min: 767px;
+@screen-md-min: 992px;
+@screen-lg-min: 1320px;
+
+
+/* END Extra small devices (phones, 320px) and 768px */
+@media (max-width : @screen-sm-min) {
+
+  /* header */
+  header {
+
+    div.header-main {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      /* logo site style */
+      .header-logo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        img {
+          margin-top: 10px;
+        }
+      }
+      /* END logo site style */
+
+      nav {
+        width: 100%;
+        font-size: 13px;
+
+        .navigation {
+          justify-content: center;
+          width: 100%;
+
+          .nav-link {
+            min-width: 0px;
+          }
+        }
+
+      }
+    }
+  }
+  /* END header */
+
+  /* style button download-cv */
+  a.download-cv {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+  }
+  /* END style button download-cv */
+
+  /* welcome block */
+  section.welcome {
+    height: 385px;
+    h1 {
+      font-size: 1.5em; //86pt
+    }
+    h2 {
+      font-size: 1em; //40pt
+    }
+
+    .welcome-caption {
+      margin-top: 100px;
+      margin-bottom: 0;
+    }
+
+    .welcome-text {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    /* button for me style */
+    .welcome-button {
+      width: 180px;
+      max-width: 340px;
+      max-height: 50px;
+      height: 30px;
+      margin-bottom: 3.6458%; //70px
+      font-size: 12px;
+    }
+
+    /* social-offices */
+    .social-offices {
+      width: 60%;
+      margin-bottom: 70px;
+
+      .group-social {
+        .network-icon {
+          font-size: 12px;
+        }
+      }
+
+    }/* END social-offices */
+
+  }
+  /* END welcome block */
+
+
+  /* experience block */
+  section.experience {
+    position: relative;
+    top: -135px;
+    padding: 140px 2%;
+    //background: url("../images/experience-back.png") no-repeat;
+    //opacity: 0.4;
+
+    .experience-caption {
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .container-expirience {
+
+      .skills {
+        width: 120px;
+        font-size: 0.875em;
+      }
+
+      .p-skill {
+        font-size: 0.875em;
+      }
+
+    }
+
+  }/* END experience block */
+
+
+}/* END Extra small devices (phones, 320px) and 768px */
+
+
+
+
+
+
+
+
+
+
+

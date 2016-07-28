@@ -1,0 +1,41 @@
+/* Small devices (tablets, 768px and 992px) */
+@media only screen and (min-width: 767px) and (max-width: 992px) {
+  /* welcome block */
+  section.welcome {
+    /* button for me style */
+    /* social-offices */
+    /* END social-offices */
+  }
+  section.welcome h1 {
+    font-size: 1.8em;
+  }
+  section.welcome h2 {
+    font-size: 1.3em;
+  }
+  section.welcome .welcome-caption {
+    margin-bottom: 0;
+  }
+  section.welcome .welcome-button {
+    width: 27.7083%;
+    max-width: 340px;
+    max-height: 50px;
+    height: 29.4117%;
+    font-size: 17px;
+  }
+  section.welcome .social-offices {
+    width: 350px;
+  }
+  section.welcome .social-offices .group-social .network-icon {
+    font-size: 15px;
+  }
+  /* END welcome block */
+  /* experience block */
+  section.experience {
+    top: -140px;
+  }
+  section.experience .container-expirience .skills {
+    width: 200px;
+  }
+  /* END experience block */
+}
+/* END Small devices (tablets, 768px and 992px) */

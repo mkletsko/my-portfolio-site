@@ -1,0 +1,98 @@
+/* welcome block */
+.welcome {
+  width: 100%;
+  background: url("../images/mac.png") no-repeat fixed center center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+
+  .welcome-caption {
+    margin-top: 170px;
+    margin-bottom: 0;
+  }
+
+  .welcome-text {
+    margin-top: 50px; //70px
+    margin-bottom: 50px; //70px
+  }
+
+  /* button for me style */
+  .welcome-button {
+    width: 17.7083%; //340px
+    max-width: 340px;
+    height: 60px;
+    margin-bottom: 50px; //70px
+    background-color: #5fd080;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transition-property: transform;
+      transform: scale(1.1);
+    }
+
+  }
+
+  /* social-offices */
+  .social-offices {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin-bottom: 150px;
+    overflow: hidden;
+
+    /* group-social ul*/
+    .group-social {
+      padding: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      /* social network icon */
+      .network-icon {
+        list-style-type: none;
+        font-size: 20px;
+
+        /* social-icon element a*/
+        .social-icon {
+          color: white;
+          &:hover {
+            transition: color ease .3s;
+          }
+        }/* END social-icon element a */
+
+        /* separately icon style */
+        .icon-github {
+          &:hover {
+            color: black;
+          }
+        }
+
+        .icon-facebook {
+          &:hover {
+            color: #3b5998;
+          }
+        }
+
+        .icon-fa-linkedin {
+           &:hover {
+             color: #0073b2;
+           }
+         }
+
+        .icon-vk {
+          &:hover {
+            color: #537599;
+          }
+        }
+        /* END separately icon style */
+
+      }/* END social network icon */
+
+    }/* END group-social */
+
+  }/* END social-offices */
+
+}
+/* END welcome block */

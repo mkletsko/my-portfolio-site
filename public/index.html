@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv= "X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mikhail Kletsko: Front-End Developer</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="media-styles/media-styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.gif">
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+    <!--  preloader for site -->
+    <div id="preloader">
+        <div id="preloader_preload"></div>
+    </div>
+
+    <script>
+        var hellopreloader = document.getElementById("preloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+
+            var interhellopreloader = setInterval(function () {
+
+                el.style.opacity = el.style.opacity - 0.05;
+
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+
+            }, 16);
+        }
+
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 1000);
+        };
+    </script>
+    <!-- END preloader for site-->
+
+    <!-- header -->
+    <header>
+        <div class="header-main inside-padding">
+            <div class="header-logo">
+                <a href="#" class="logo logo-clear"><img src="images/mk.png" alt="Mikhail Kletsko"></a>
+                <a href="#" class="logo logo-dark"><img src="images/mk-dark.png" alt="Mikhail Kletsko"></a>
+            </div>
+            <nav class="nav-main">
+                <a href="https://drive.google.com/file/d/0B4MZu4SurTDCYTRwZmVoR1lmMnM/view" class="download-cv button-content-position" target="_blank"><span>Download CV</span></a>
+                <ul class="navigation">
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="#">Skills</a></li>
+                    <li class="nav-link"><a href="#">Works</a></li>
+                    <li class="nav-link"><a href="#">About</a></li>
+                    <li class="nav-link"><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- END header -->
+
+    <!-- section welcome -->
+    <section class="welcome center-in-section">
+        <h1 class="welcome-caption">MIKHAIL KLESTKO</h1>
+        <h2 class="welcome-text">FRONT-END DEVELOPER</h2>
+
+        <a href="#" class="welcome-button button-content-position">
+            <p>CONTACT ME!</p>
+        </a>
+
+        <!-- social-offices -->
+        <div class="social-offices">
+
+            <ul class="group-social">
+                <li class="network-icon"><a href="https://github.com/mkletsko" class="social-icon icon-github" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                <li class="network-icon"><a href="https://www.facebook.com/misha.kletsko" class="social-icon icon-facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                <li class="network-icon"><a href="https://www.linkedin.com/in/mikhail-kletsko-1b373097" class="social-icon icon-fa-linkedin" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                <li class="network-icon"><a href="https://vk.com/id26908813" class="social-icon icon-vk" target="_blank"><i class="fa fa-vk fa-2x"></i></a></li>
+            </ul>
+
+        </div><!-- social-offices -->
+
+    </section><!-- END section welcome -->
+
+    <!-- section skills -->
+    <section class="experience">
+
+        <h1 class="experience-caption">MY SKILLS</h1>
+
+        <div class="container container-expirience">
+            <div class="skills">
+                <img src="images/svg/html.svg" alt="html5" class="img-skill">
+                <div class="descrip-skill">Написание семантичного, валидного, кроссбраузерного и качественного HTML</div>
+            </div>
+
+            <div class="skills">
+                <img src="images/svg/css.svg" alt="css3" class="img-skill">
+                <div class="descrip-skill">Написание качественного и легко расширяемого CSS кода</div>
+            </div>
+
+            <div class="skills skill-1">
+                <img src="images/svg/js.svg" alt="css3" class="javascript+jquery">
+                <div class="descrip-skill">Написание скриптов на native Javascript и JQuery для динамического поводения интерфейса страницы</div>
+            </div>
+
+            <div class="skills skill-1">
+                <img src="images/svg/photoshop.svg" alt="adobe photoshop" class="img-skill">
+                <div class="descrip-skill">Работа с PSD в Adobe Photoshop</div>
+            </div>
+
+
+            <div class="skills skill-1">
+                <img src="images/svg/less.svg" alt="less" class="img-skill">
+                <div class="descrip-skill">Работа с CSS-препроцессором LESS для ускорения верстки</div>
+            </div>
+
+            <div class="skills skill-1">
+                <img src="images/svg/bootstrap.svg" alt="bootstrap" class="img-skill">
+                <div class="descrip-skill">Построение интерфейса на Bootstrap</div>
+            </div>
+
+            <div class="skills skill-1">
+                <img src="images/svg/responsive.svg" alt="responsive" class="img-skill">
+                <div class="descrip-skill">Создание адаптивных сайтов и веб-приложений</div>
+            </div>
+
+            <div class="skills skill-1">
+                <img src="images/svg/git.svg" alt="git" class="img-skill">
+                <div class="descrip-skill">Использование VCS Git и Github для командной разработки</div>
+            </div>
+
+            <div class="skills skill-1">
+                <img src="images/svg/gulp-logo.svg" alt="gulp" class="img-skill">
+                <div class="descrip-skill">Применение Gulp для автоматизации разработки</div>
+            </div>
+
+            <p class="p-skill">Также умение использовать: AJAX, JSON,  NPM, Jade, WebStorm, SQL</p>
+
+        </div>
+
+    </section><!-- END section skills -->
+
+
+    <!-- section works -->
+    <section class="works">
+        <div class="container container-carousel">
+
+            <div id="carousel" class="carousel">
+
+                <div class="arrow prev"><img src="images/prev.png"></div>
+
+                <div class="gallery">
+                    <ul class="ul-gallery">
+                        <li class="li-gallery"><img src="https://js.cx/carousel/1.png"></li>
+                        <li class="li-gallery"><img src="https://js.cx/carousel/2.png">vfdsvsd</li>
+                    </ul>
+                </div>
+
+                <div class="arrow next"><img src="images/next.png"></div>
+
+            </div>
+
+        </div>
+    </section><!-- END section works -->
+
+    <script src="js/app.js"></script>
+</body>
+</html>

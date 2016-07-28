@@ -1,0 +1,113 @@
+/* END Extra small devices (phones, 320px) and 768px */
+@media (max-width: 767px) {
+  /* header */
+  header div.header-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    /* logo site style */
+    /* END logo site style */
+  }
+  header div.header-main .header-logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  header div.header-main .header-logo img {
+    margin-top: 10px;
+  }
+  header div.header-main nav {
+    width: 100%;
+    font-size: 13px;
+  }
+  header div.header-main nav .navigation {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  header div.header-main nav .navigation .nav-link {
+    min-width: 0px;
+  }
+  /* END header */
+  /* style button download-cv */
+  a.download-cv {
+    margin: 5px 0 0 0;
+    font-size: 13px;
+  }
+  /* END style button download-cv */
+  /* welcome block */
+  section.welcome {
+    height: 385px;
+    /* button for me style */
+    /* social-offices */
+    /* END social-offices */
+  }
+  section.welcome h1 {
+    font-size: 1.5em;
+  }
+  section.welcome h2 {
+    font-size: 1em;
+  }
+  section.welcome .welcome-caption {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+  section.welcome .welcome-text {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  section.welcome .welcome-button {
+    width: 180px;
+    max-width: 340px;
+    max-height: 50px;
+    height: 30px;
+    margin-bottom: 3.6458%;
+    font-size: 12px;
+  }
+  section.welcome .social-offices {
+    width: 60%;
+    margin-bottom: 70px;
+  }
+  section.welcome .social-offices .group-social .network-icon {
+    font-size: 12px;
+  }
+  /* END welcome block */
+  /* experience block */
+  section.experience {
+    position: relative;
+    top: -135px;
+    padding: 140px 2%;
+  }
+  section.experience .experience-caption {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  section.experience .container-expirience .skills {
+    width: 120px;
+    font-size: 0.875em;
+  }
+  section.experience .container-expirience .p-skill {
+    font-size: 0.875em;
+  }
+  /* END experience block */
+}
+/* END Extra small devices (phones, 320px) and 768px */

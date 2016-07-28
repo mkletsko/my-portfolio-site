@@ -1,0 +1,86 @@
+/* experience block */
+.experience {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  z-index: 2;
+  position: relative;
+  top: -140px;
+  padding: 140px 0;
+  background: url("../images/experience.png") no-repeat;
+  background-size: 100% 100%;
+  color: rgba(18, 18, 18, 0.86);
+}
+.experience .experience-caption {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.experience .container-expirience {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+          align-content: stretch;
+  -webkit-flex-flow: row wrap;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+.experience .container-expirience .skills {
+  width: 280px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+.experience .container-expirience .skills .img-skill {
+  display: block;
+  max-width: 40%;
+  max-height: 100%;
+  height: auto;
+}
+.experience .container-expirience .skills .descrip-skill {
+  margin-top: 10px;
+  line-height: 1.5em;
+  color: #515153;
+  text-align: center;
+}
+.experience .container-expirience .p-skill {
+  width: 100%;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+/* END experience block */

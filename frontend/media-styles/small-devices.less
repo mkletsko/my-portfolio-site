@@ -1,0 +1,62 @@
+@screen-sm-min: 767px;
+@screen-md-min: 992px;
+
+/* Small devices (tablets, 768px and 992px) */
+@media only screen
+and (min-width : @screen-sm-min)
+and (max-width : @screen-md-min) {
+
+  /* welcome block */
+  section.welcome {
+
+    h1 {
+      font-size: 1.8em; //86pt
+    }
+    h2 {
+      font-size: 1.3em; //40pt
+    }
+
+    .welcome-caption {
+      margin-bottom: 0;
+    }
+
+
+    /* button for me style */
+    .welcome-button {
+      width: 27.7083%; //340px
+      max-width: 340px;
+      max-height: 50px;
+      height: 29.4117%; //100px
+      font-size: 17px;
+    }
+
+    /* social-offices */
+    .social-offices {
+      width: 350px;
+
+      .group-social {
+        .network-icon {
+          font-size: 15px;
+        }
+      }
+
+    }/* END social-offices */
+
+  }/* END welcome block */
+
+
+  /* experience block */
+  section.experience {
+    top: -140px;
+    .container-expirience {
+
+      .skills {
+        width: 200px;
+        }
+
+      }
+
+  }/* END experience block */
+
+
+}/* END Small devices (tablets, 768px and 992px) */
