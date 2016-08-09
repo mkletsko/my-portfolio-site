@@ -13,7 +13,6 @@
     <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.gif">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <script src="js/flexibility.js"></script>
     <![endif]-->
 </head>
 <body class="body-site">
@@ -59,11 +58,11 @@
             <nav class="nav-main">
                 <a href="https://drive.google.com/file/d/0B4MZu4SurTDCYTRwZmVoR1lmMnM/view" class="download-cv button-content-position" target="_blank"><span>Download CV</span></a>
                 <ul class="navigation">
-                    <li class="nav-link"><a href="#">Home</a></li>
-                    <li class="nav-link"><a href="#">Skills</a></li>
-                    <li class="nav-link"><a href="#">Works</a></li>
-                    <li class="nav-link"><a href="#">About</a></li>
-                    <li class="nav-link"><a href="#">Contacts</a></li>
+                    <li class="nav-link"><a href="#welcome">Home</a></li>
+                    <li class="nav-link"><a href="#experience">Skills</a></li>
+                    <li class="nav-link"><a href="#works">Works</a></li>
+                    <li class="nav-link"><a href="#about">About</a></li>
+                    <li class="nav-link"><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
         </div>
@@ -71,7 +70,7 @@
     <!-- END header -->
 
     <!-- section welcome -->
-    <section class="welcome center-in-section">
+    <section class="welcome center-in-section" id="welcome">
 
         <div class="welcome-content content-background center-in-section">
 
@@ -103,7 +102,7 @@
 
 
     <!-- section experience -->
-    <section class="experience center-in-section">
+    <section class="experience center-in-section" id="experience">
 
         <div class="experience-top edge-content content-background"></div>
 
@@ -169,7 +168,7 @@
 
 
     <!-- section works -->
-    <section class="works center-in-section">
+    <section class="works center-in-section" id="works">
 
         <div class="works-top edge-content content-background "></div>
 
@@ -246,7 +245,7 @@
 
 
     <!-- section about -->
-    <section class="about center-in-section">
+    <section class="about center-in-section" id="about">
 
         <div class="about-top edge-content content-background"></div>
 
@@ -299,7 +298,7 @@
 
 
     <!-- footer -->
-    <footer class="footer-site center-in-section">
+    <footer class="footer-site center-in-section" id="contacts">
 
         <div class="footer-top edge-content content-background">
 
@@ -350,12 +349,65 @@
 
         </div><!-- END footer content -->
 
-
-
-
-
     </footer><!-- END footer -->
 
+    <!-- newsletter -->
+    <section class="newsletter">
+        <img src="images/close.png" alt="close newsletter window" class="close-newsletter">
+        <div class="block-newsletter">
+
+            <div class="title">
+                <span class="enter-me-letter">Enter your data and send me an e-mail</span> </div>
+
+            <div class="content">
+                <form method="post" id="feedback-form">
+                    <div class="row half">
+                        <div class="6u">
+                            <input type="text" class="text" name="name" placeholder="Name" />
+                        </div>
+                        <div class="6u">
+                            <input type="text" class="text" name="email" placeholder="Email" />
+                        </div>
+                    </div>
+                    <div class="row half">
+                        <div class="12u">
+                            <textarea name="message" placeholder="Message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <!--<input type="submit" value="Send Message" name="button" class="button-letter">-->
+                            <a href="#" class="button-letter submit">Send Message</a> </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </section><!-- END newsletter -->
+
+
     <script src="js/app.js"></script>
+
+    <script>
+        document.getElementById('feedback-form').addEventListener('submit', function(evt){
+            var http = new XMLHttpRequest(), f = this;
+            evt.preventDefault();
+            http.open("POST", "send.php", true);
+            http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            http.send("nameFF=" + f.nameFF.value + "&contactFF=" + f.contactFF.value + "&messageFF=" + f.messageFF.value);
+            http.onreadystatechange = function() {
+                if (http.readyState == 4 && http.status == 200) {
+                    alert(http.responseText + ', Ваше сообщение получено.\nНаши специалисты ответят Вам в течении 2-х дней.\nБлагодарим за интерес к нашей фирме!');
+                    f.messageFF.removeAttribute('value'); // очистить поле сообщения (две строки)
+                    f.messageFF.value='';
+                }
+            }
+            http.onerror = function() {
+                alert('Извините, данные не были переданы');
+            }
+        }, false);
+    </script>
+
 </body>
 </html>

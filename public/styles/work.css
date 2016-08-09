@@ -74,7 +74,8 @@
   width: 100%;
 }
 .works .works-content .portfolio .project:hover {
-  border: 1px solid black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+          box-shadow: rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
 }
 .works .works-bottom {
   background-image: url("../images/background/work-3.png");

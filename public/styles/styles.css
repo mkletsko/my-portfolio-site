@@ -13,7 +13,6 @@ body {
   line-height: 22px;
   font-size: 14px;
   color: #aaaaaa;
-  padding-bottom: -10000px;
   /* effects for header and nav when scroll page  */
   /* END effects for header and nav when scroll page */
   /* styles for preloader site */
@@ -30,6 +29,8 @@ body {
   /* END about block */
   /* footer */
   /* END footer */
+  /* newsletter block style */
+  /* END newsletter block style */
 }
 body h1 {
   font-size: 2em;
@@ -218,6 +219,7 @@ body .welcome {
   background-color: #a4a7a4;
   text-align: center;
   color: white;
+  z-index: 2;
   /* welcome-content block */
   /* END welcome-content block */
 }
@@ -474,7 +476,8 @@ body .works .works-content .portfolio .project .project-img img {
   width: 100%;
 }
 body .works .works-content .portfolio .project:hover {
-  border: 1px solid black;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+          box-shadow: rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
 }
 body .works .works-bottom {
   background-image: url("../images/background/work-3.png");
@@ -730,4 +733,86 @@ body .footer-site .footer-content .me-social-network .social-offices .group-soci
   color: #FFFFFF;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+body .newsletter {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(2, 2, 1, 0.83);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+body .newsletter .close-newsletter {
+  position: absolute;
+  cursor: pointer;
+  right: 5%;
+  top: 5%;
+}
+body .newsletter .block-newsletter {
+  width: 80%;
+  max-width: 800px;
+  margin: 10% auto;
+  text-align: center;
+}
+body .newsletter .block-newsletter .enter-me-letter {
+  font-size: 20pt;
+  font-weight: bold;
+  color: #67cc82;
+}
+body .newsletter .block-newsletter form input.text,
+body .newsletter .block-newsletter textarea {
+  position: relative;
+  display: block;
+  background: #e2e2e2;
+  width: 100%;
+  -webkit-border-radius: 0.50em;
+          border-radius: 0.50em;
+  margin: 1em 0em;
+  padding: 1.50em 1em;
+  -webkit-box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1em;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+body .newsletter .block-newsletter form input.text:focus,
+body .newsletter .block-newsletter textarea:focus {
+  -webkit-box-shadow: 0 0 2px 1px #E0E0E0;
+          box-shadow: 0 0 2px 1px #E0E0E0;
+  background: #fff;
+}
+body .newsletter .block-newsletter textarea {
+  min-height: 12em;
+}
+body .newsletter .block-newsletter .button-letter {
+  max-width: 250px;
+  display: block;
+  margin: 2em auto;
+  padding: 1em 2em 1em 2em;
+  background: #67cc82;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+  border: none;
+  letter-spacing: 0.20em;
+  line-height: 1.8em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1.2em;
+  color: #FFF;
+}
+body .newsletter .block-newsletter .button-letter:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #8DCB89;
 }

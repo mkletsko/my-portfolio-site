@@ -4,6 +4,7 @@
   background-color: #a4a7a4;
   text-align: center;
   color: white;
+  z-index: 2;
   /* welcome-content block */
   /* END welcome-content block */
 }
