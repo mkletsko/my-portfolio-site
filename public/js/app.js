@@ -1,10 +1,31 @@
-(function () {
+var App;
+App = (function () {
 
     var myAppVariables = {
-        headerMain : document.querySelector('.header-main'),
-        logoDark : document.querySelector('.logo-dark'),
-        logoClear : document.querySelector('.logo-clear'),
-        downloadCV : document.querySelector('.download-cv'),
+        /* propertys */
+        headerMain: document.querySelector('.header-main'),
+        logoDark: document.querySelector('.logo-dark'),
+        logoClear: document.querySelector('.logo-clear'),
+        downloadCV: document.querySelector('.download-cv'),
+
+        frontEventMethods: function (e) {
+
+            if (typeof e.stopPropagation === 'function') {
+                e.stopPropagation();
+            }
+            if (typeof  e.cancelBubble !== 'undefined') {
+                e.cancelBubble = true;
+            }
+            if (typeof e.preventDefault === 'function') {
+                e.preventDefault();
+            }
+            if (typeof  e.returnValue !== 'undefined') {
+                e.returnValue = false;
+            }
+
+        },
+
+
     };
 
     var headerChange = function (e) {
@@ -21,21 +42,9 @@
         }
 
 
-        if(typeof e.stopPropagation === 'function'){
-            e.stopPropagation();
-        }
-        if(typeof  e.cancelBubble !== 'undefined'){
-            e.cancelBubble = true;
-        }
-        if(typeof e.preventDefault === 'function'){
-            e.preventDefault();
-        }
-        if(typeof  e.returnValue !== 'undefined') {
-            e.returnValue = false;
-        }
+        myAppVariables.frontEventMethods(e);
 
     };
-
 
 
     /* create downloadCV button position */
@@ -56,126 +65,35 @@
 
         /* event create downloadCV button position*/
         var eventPositionCV = function (e) {
-            if(document.documentElement.clientWidth < 767) {
+            if (document.documentElement.clientWidth < 767) {
                 buttonCV.parentNode.removeChild(buttonCV);
                 headLogo.insertBefore(buttonCV, headLogo.children[2]);
             } else {
                 navMain.insertBefore(buttonCV, navMain.children[0]);
             }
 
-
-            if(typeof e.stopPropagation === 'function'){
-                e.stopPropagation();
-            }
-            if(typeof  e.cancelBubble !== 'undefined'){
-                e.cancelBubble = true;
-            }
-            if(typeof e.preventDefault === 'function'){
-                e.preventDefault();
-            }
-            if(typeof  e.returnValue !== 'undefined') {
-                e.returnValue = false;
-            }
+            myAppVariables.frontEventMethods(e);
 
         };
 
-        if (window.addEventListener){
+        if (window.addEventListener) {
             window.addEventListener('scroll', headerChange);
             window.addEventListener('resize', eventPositionCV);
-        } else if (window.attachEvent){
+        } else if (window.attachEvent) {
             window.attachEvent('scroll', headerChange);
             window.attachEvent('resize', eventPositionCV);
         } else {
             window.onscroll = headerChange;
             window.onresize = eventPositionCV;
-        };
+        }
+        ;
         /* END event create downloadCV button position*/
 
     })();
     /* END  create downloadCV button position */
 
 
-
-
-    /* event carousel */
-    (function () {
-        var carouselElem = document.querySelector('.carousel')
-            galleryUl = document.querySelector('.ul-gallery'),
-            galleryLi = document.querySelector('.li-gallery'),
-            buttonPrev = document.querySelector('.prev'),
-            buttonNext = document.querySelector('.next'),
-            width = 100,
-            count = 3,
-            position = 0;
-
-        /* click prev */
-        var clickPrev = function (e) {
-
-            position = Math.min(position + width * count, 0);
-            galleryUl.style.marginLeft = position + '%';
-
-
-            if(typeof e.stopPropagation === 'function'){
-                e.stopPropagation();
-            }
-            if(typeof  e.cancelBubble !== 'undefined'){
-                e.cancelBubble = true;
-            }
-            if(typeof e.preventDefault === 'function'){
-                e.preventDefault();
-            }
-            if(typeof  e.returnValue !== 'undefined') {
-                e.returnValue = false;
-            }
-
-        };
-        /* END click prev */
-
-        /* click next */
-        var clickNext = function (e) {
-
-            position = Math.max(position - width * count, -width * (galleryLi.length - count));
-            galleryUl.style.marginLeft = position + '100';
-
-
-            if(typeof e.stopPropagation === 'function'){
-                e.stopPropagation();
-            }
-            if(typeof  e.cancelBubble !== 'undefined'){
-                e.cancelBubble = true;
-            }
-            if(typeof e.preventDefault === 'function'){
-                e.preventDefault();
-            }
-            if(typeof  e.returnValue !== 'undefined') {
-                e.returnValue = false;
-            }
-
-        };
-        /* END click next */
-
-        if (buttonPrev.addEventListener || buttonNext.addEventListener){
-            buttonPrev.addEventListener('click', clickPrev);
-            buttonNext.addEventListener('click', clickNext);
-        } else if (buttonPrev.attachEvent || buttonNext.attachEvent){
-            buttonPrev.attachEvent('click', clickPrev);
-            buttonNext.attachEvent('click', clickNext);
-        } else {
-            buttonPrev.onclick = clickPrev;
-            buttonNext.onclick = clickNext;
-        };
-        /* END event create downloadCV button position*/
-
-
-        buttonPrev.onclick = function() {
-            // сдвиг вправо
-            // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-            position = Math.max(position - width * count, -width * (galleryLi.length - count));
-            galleryUl.style.marginLeft = position + 'px';
-        };
-
-    })();
-    /* END event carousel */
+    
 
 
 

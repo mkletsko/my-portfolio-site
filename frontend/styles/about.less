@@ -1,0 +1,80 @@
+/* about block */
+.about {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  z-index: 3;
+  position: relative;
+  top: -300px;
+
+  .about-top {
+    background-image: url("../images/background/about-2.png");
+  }
+
+  /* about-content */
+  .about-content {
+    background-image: url("../images/background/about-1.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px 0;
+
+
+    .cav-block {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    /* about-container */
+    .about-container {
+      display: flex;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+
+      /* info me block */
+      .about-info {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        width: 80%;
+        font-size: 12pt;
+        line-height: 20pt;
+
+        .me-text {
+          width: 100%;
+          display: block;
+          padding: 0 2%;
+          box-sizing: border-box;
+        }
+
+      }/* END info me block */
+
+      /* foto me block */
+      .foto-about {
+        width: 20%;
+        height: 100%;
+        max-width: 190px;
+
+        img {
+          display: block;
+          max-width: 100%;
+          //width: 200px;
+          height: auto;
+        }
+
+      }/* END foto me block */
+
+
+    }/* END about-container */
+
+
+
+  }/* END about-content */
+
+  .about-bottom {
+    background-image: url("../images/background/about-3.png");
+  }
+
+
+}/* END about block */

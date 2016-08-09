@@ -5,19 +5,20 @@
     <meta http-equiv= "X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mikhail Kletsko: Front-End Developer</title>
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="media-styles/media-styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media-styles.css">
     <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="icon" type="image/vnd.microsoft.icon" href="images/favicon.gif">
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="js/flexibility.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="body-site">
 
-    <!--  preloader for site -->
+    <!--  preloader for site --
     <div id="preloader">
         <div id="preloader_preload"></div>
     </div>
@@ -71,107 +72,286 @@
 
     <!-- section welcome -->
     <section class="welcome center-in-section">
-        <h1 class="welcome-caption">MIKHAIL KLESTKO</h1>
-        <h2 class="welcome-text">FRONT-END DEVELOPER</h2>
 
-        <a href="#" class="welcome-button button-content-position">
-            <p>CONTACT ME!</p>
-        </a>
+        <div class="welcome-content content-background center-in-section">
 
-        <!-- social-offices -->
-        <div class="social-offices">
+            <h1 class="welcome-caption">MIKHAIL KLESTKO</h1>
+            <h2 class="welcome-text">FRONT-END DEVELOPER</h2>
 
-            <ul class="group-social">
-                <li class="network-icon"><a href="https://github.com/mkletsko" class="social-icon icon-github" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
-                <li class="network-icon"><a href="https://www.facebook.com/misha.kletsko" class="social-icon icon-facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
-                <li class="network-icon"><a href="https://www.linkedin.com/in/mikhail-kletsko-1b373097" class="social-icon icon-fa-linkedin" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
-                <li class="network-icon"><a href="https://vk.com/id26908813" class="social-icon icon-vk" target="_blank"><i class="fa fa-vk fa-2x"></i></a></li>
-            </ul>
+            <a href="#" class="welcome-button button-content-position">
+                <p>CONTACT ME!</p>
+            </a>
 
-        </div><!-- social-offices -->
+            <!-- social-offices -->
+            <div class="social-offices">
+
+                <ul class="group-social">
+                    <li class="network-icon"><a href="https://github.com/mkletsko" class="social-icon icon-github" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                    <li class="network-icon"><a href="https://www.facebook.com/misha.kletsko" class="social-icon icon-facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                    <li class="network-icon"><a href="https://www.linkedin.com/in/mikhail-kletsko-1b373097" class="social-icon icon-fa-linkedin" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                    <li class="network-icon"><a href="https://vk.com/id26908813" class="social-icon icon-vk" target="_blank"><i class="fa fa-vk fa-2x"></i></a></li>
+                </ul>
+
+            </div><!-- social-offices -->
+
+        </div>
+
+        <div class="welcome-bottom edge-content content-background"></div>
 
     </section><!-- END section welcome -->
 
-    <!-- section skills -->
-    <section class="experience">
 
-        <h1 class="experience-caption">MY SKILLS</h1>
 
-        <div class="container container-expirience">
-            <div class="skills">
-                <img src="images/svg/html.svg" alt="html5" class="img-skill">
-                <div class="descrip-skill">Написание семантичного, валидного, кроссбраузерного и качественного HTML</div>
+    <!-- section experience -->
+    <section class="experience center-in-section">
+
+        <div class="experience-top edge-content content-background"></div>
+
+        <!-- experience-content -->
+        <div class="experience-content content-background">
+            <h1 class="experience-caption">MY SKILLS</h1>
+
+            <div class="container container-expirience">
+                <div class="skills">
+                    <img src="images/svg/html.svg" alt="html5" class="img-skill">
+                    <div class="descrip-skill">Writing semantic, valid, cross-browser and quality HTML</div>
+                </div>
+
+                <div class="skills">
+                    <img src="images/svg/css.svg" alt="css3" class="img-skill">
+                    <div class="descrip-skill">Writing quality and easily extensible CSS code</div>
+                </div>
+
+                <div class="skills skill-1">
+                    <img src="images/svg/js.svg" alt="css3" class="javascript+jquery">
+                    <div class="descrip-skill">Writing scripts in the native JavaScript and JQuery for the dynamic behavior of the page interface</div>
+                </div>
+
+                <div class="skills skill-1">
+                    <img src="images/svg/photoshop.svg" alt="adobe photoshop" class="img-skill">
+                    <div class="descrip-skill">Working with PSD in Adobe Photoshop</div>
+                </div>
+
+
+                <div class="skills skill-1">
+                    <img src="images/svg/less.svg" alt="less" class="img-skill">
+                    <div class="descrip-skill">Working with CSS-preprocessor LESS to speed up the layout</div>
+                </div>
+
+                <div class="skills skill-1">
+                    <img src="images/svg/bootstrap.svg" alt="bootstrap" class="img-skill">
+                    <div class="descrip-skill">Build on Bootstrap interface</div>
+                </div>
+
+                <div class="skills skill-1">
+                    <img src="images/svg/responsive.svg" alt="responsive" class="img-skill">
+                    <div class="descrip-skill">Creating Adaptive/Responsive Web sites and Web applications</div>
+                </div>
+
+                <div class="skills skill-1">
+                    <img src="images/svg/git.svg" alt="git" class="img-skill">
+                    <div class="descrip-skill">Using VCS Git and Github for team development</div>
+                </div>
+
+                <div class="skills skill-1">
+                    <img src="images/svg/gulp-logo.svg" alt="gulp" class="img-skill">
+                    <div class="descrip-skill">Application development to automate Gulp</div>
+                </div>
+
+                <p class="p-skill">Also, the ability to use: AJAX, JSON,  NPM, Jade, WebStorm, SQL</p>
+
             </div>
+        </div><!-- END experience-content -->
 
-            <div class="skills">
-                <img src="images/svg/css.svg" alt="css3" class="img-skill">
-                <div class="descrip-skill">Написание качественного и легко расширяемого CSS кода</div>
-            </div>
+        <div class="experience-bottom edge-content content-background"></div>
 
-            <div class="skills skill-1">
-                <img src="images/svg/js.svg" alt="css3" class="javascript+jquery">
-                <div class="descrip-skill">Написание скриптов на native Javascript и JQuery для динамического поводения интерфейса страницы</div>
-            </div>
-
-            <div class="skills skill-1">
-                <img src="images/svg/photoshop.svg" alt="adobe photoshop" class="img-skill">
-                <div class="descrip-skill">Работа с PSD в Adobe Photoshop</div>
-            </div>
-
-
-            <div class="skills skill-1">
-                <img src="images/svg/less.svg" alt="less" class="img-skill">
-                <div class="descrip-skill">Работа с CSS-препроцессором LESS для ускорения верстки</div>
-            </div>
-
-            <div class="skills skill-1">
-                <img src="images/svg/bootstrap.svg" alt="bootstrap" class="img-skill">
-                <div class="descrip-skill">Построение интерфейса на Bootstrap</div>
-            </div>
-
-            <div class="skills skill-1">
-                <img src="images/svg/responsive.svg" alt="responsive" class="img-skill">
-                <div class="descrip-skill">Создание адаптивных сайтов и веб-приложений</div>
-            </div>
-
-            <div class="skills skill-1">
-                <img src="images/svg/git.svg" alt="git" class="img-skill">
-                <div class="descrip-skill">Использование VCS Git и Github для командной разработки</div>
-            </div>
-
-            <div class="skills skill-1">
-                <img src="images/svg/gulp-logo.svg" alt="gulp" class="img-skill">
-                <div class="descrip-skill">Применение Gulp для автоматизации разработки</div>
-            </div>
-
-            <p class="p-skill">Также умение использовать: AJAX, JSON,  NPM, Jade, WebStorm, SQL</p>
-
-        </div>
-
-    </section><!-- END section skills -->
+    </section><!-- END section experience -->
 
 
     <!-- section works -->
-    <section class="works">
-        <div class="container container-carousel">
+    <section class="works center-in-section">
 
-            <div id="carousel" class="carousel">
+        <div class="works-top edge-content content-background "></div>
 
-                <div class="arrow prev"><img src="images/prev.png"></div>
+        <!-- works-content -->
+        <div class="works-content content-background">
 
-                <div class="gallery">
-                    <ul class="ul-gallery">
-                        <li class="li-gallery"><img src="https://js.cx/carousel/1.png"></li>
-                        <li class="li-gallery"><img src="https://js.cx/carousel/2.png">vfdsvsd</li>
-                    </ul>
-                </div>
+            <h1 class="works-caption">WORKS</h1>
 
-                <div class="arrow next"><img src="images/next.png"></div>
+            <!-- portfolio -->
+            <div class="portfolio">
 
+                <!-- project 1 -->
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://github.com/mkletsko/proffibit" target="_blank">
+                            <img src="images/projects/proffibit.png" alt="">
+                        </a>
+                    </div>
+                </div><!-- END project 1 -->
+
+                <!-- project 2 -->
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://github.com/mkletsko/proffibit" target="_blank">
+                            <img src="images/projects/my-settings.png" alt="">
+                        </a>
+                    </div>
+                </div><!-- END project 2 -->
+
+                <!-- project 3 -->
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://github.com/mkletsko/agency_business" target="_blank">
+                            <img src="images/projects/agency_businnes.png" alt="">
+                        </a>
+                    </div>
+                </div><!-- END project 3-->
+
+                <!-- project 4 -->
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://github.com/mkletsko/proffibit" target="_blank">
+                            <img src="images/projects/handyhilfe.png" alt="">
+                        </a>
+                    </div>
+                </div><!-- END project 3 -->
+
+                <!-- project 5 -->
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://github.com/mkletsko/proffibit" target="_blank">
+                            <img src="images/projects/our_company.png" alt="">
+                        </a>
+                    </div>
+                </div><!-- END project 5 -->
+
+                <!-- project 6 -->
+                <div class="project">
+                    <div class="project-img">
+                        <a href="https://github.com/mkletsko/proffibit" target="_blank">
+                            <img src="images/projects/sales.png" alt="">
+                        </a>
+                    </div>
+                </div><!-- END project 6 -->
+
+            </div><!-- END portfolio -->
+
+        </div><!-- END works-content -->
+
+        <div class="works-bottom edge-content content-background"></div>
+
+    </section><!-- END section works -->
+
+
+
+    <!-- section about -->
+    <section class="about center-in-section">
+
+        <div class="about-top edge-content content-background"></div>
+
+        <!-- about-content -->
+        <div class="about-content content-background">
+
+            <div class="cav-block">
+                <img src="images/cav.png" alt="" class="cav-about">
             </div>
 
+            <!-- about-container -->
+            <div class="about-container">
+                <!-- foto me block -->
+                <div class="foto-about">
+                    <img src="images/misha-01.png" alt="" class="foto-me">
+                </div><!--END foto me block -->
+                <!-- info me block -->
+                <div class="about-info">
+
+                    <div class="me-text">
+                        Hi! I'm Misha, Front-End developer from Ukraine. Based in Kiev.
+                        Я люблю воплощать PSD макеты сайтов в жизнь, создавать адаптивные и кроссплатформенные веб-приложения, которые будут только приносить удовольствие посетителям.
+                        Наполняю их динамикой, логикой с помощью JavaScript и CSS-анимации.
+
+                        <ul>Всегда стремлюсь к следующим ценностям:
+                            <li>Использовать только современные методы разработки.</li>
+                            <li>Идти в ногу со временем, изучать новые технологии и всегда стремится к профессиональному развитию.</li>
+                            <li>Создавать красивые и удобные интерфейсы, приносящие удовольствие от их посещения.</li>
+                            <li>Создавать адаптивные и отзывчивых приложения, не создающих дискомфорта, при их посещении с любого устройства.</li>
+                            <li>Изучать, применять современные и оптимальные методики написания кода, которые будут приносить минимум затруднения при их поддержке и доработке другими разработчиками.</li>
+                        </ul>
+
+                        Буду рад пообщаться с вами и ответить на ваши вопросы.
+                        Спасибо, что посетили мой сайт!
+                    </div>
+
+                </div><!-- END info me block -->
+
+
+
+
+            </div><!-- END about-container -->
+
+
+        </div><!-- END about-content -->
+
+        <div class="about-bottom edge-content content-background"></div>
+
+    </section><!-- END section about -->
+
+
+    <!-- footer -->
+    <footer class="footer-site center-in-section">
+
+        <div class="footer-top edge-content content-background">
+            <h1>CONTACT INFO</h1>
         </div>
-    </section><!-- END section works -->
+
+        <!-- footer content -->
+        <div class="footer-content">
+            <span class="feel-footer">Fell free to get in touch anytime you want.</span>
+
+            <!-- contacts-me footer -->
+            <div class="contacts-me">
+                <div class="me-email">
+                    <span class="title-me-contact">E-mail</span>
+                    <span class="desc-me-contact">misha.kletsko@gmail.com</span>
+                </div>
+                <div class="me-email me-phone">
+                    <span class="title-me-contact">Phone</span>
+                    <span class="desc-me-contact">+38 098 792 12 79</span>
+                </div>
+                <div class="me-email me-location">
+                    <span class="title-me-contact">Location</span>
+                    <span class="desc-me-contact">Kiev, Ukraine</span>
+                </div>
+            </div><!-- END contacts-me footer -->
+
+            <!-- me-social-network footer -->
+            <div class="me-social-network">
+                <div class="misha-2016">
+                    <span>@2016 Mikhail Kletsko</span>
+                </div>
+
+                <!-- social-offices -->
+                <div class="social-offices">
+
+                    <ul class="group-social">
+                        <li class="network-icon"><a href="https://github.com/mkletsko" class="social-icon icon-github" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+                        <li class="network-icon"><a href="https://www.facebook.com/misha.kletsko" class="social-icon icon-facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></li>
+                        <li class="network-icon"><a href="https://www.linkedin.com/in/mikhail-kletsko-1b373097" class="social-icon icon-fa-linkedin" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                        <li class="network-icon"><a href="https://vk.com/id26908813" class="social-icon icon-vk" target="_blank"><i class="fa fa-vk fa-2x"></i></a></li>
+                    </ul>
+
+                </div><!-- social-offices -->
+
+            </div><!-- END me-social-network footer -->
+
+        </div><!-- END footer content -->
+
+
+
+
+
+    </footer><!-- END footer -->
 
     <script src="js/app.js"></script>
 </body>

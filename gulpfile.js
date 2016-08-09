@@ -5,6 +5,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     svgSprite = require('gulp-svg-sprite'),
+    cache = require('gulp-cached'),
+    cleanCSS = require('gulp-clean-css'),
     gulpIf = require('gulp-if');
 
 //less-task
@@ -12,6 +14,7 @@ gulp.task('less', function () {
     return gulp.src('frontend/styles/*.less')
         .pipe(less())
         .pipe(autoprefixer('last 15 versions'))
+        .pipe(cache('less'))
         .pipe(gulp.dest('public/styles'))
 });
 
@@ -20,7 +23,22 @@ gulp.task('media', function () {
     return gulp.src('frontend/media-styles/*.less')
         .pipe(less())
         .pipe(autoprefixer('last 15 versions'))
+        .pipe(cache('less'))
         .pipe(gulp.dest('public/media-styles'))
+});
+
+//minify-css-task
+gulp.task('minify-css-media', function() {
+    return gulp.src('public/media-styles/media-styles.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('public/css'));
+});
+
+//minify-css-task
+gulp.task('minify-css-styles', function() {
+    return gulp.src('public/styles/styles.css')
+        .pipe(cleanCSS())
+        .pipe(gulp.dest('public/css'));
 });
 
 //html-task
@@ -61,6 +79,8 @@ gulp.task('styles:svg', function() {
 gulp.task('watch', function () {
     gulp.watch('frontend/styles/**/*.less', ['less']);
     gulp.watch('frontend/media-styles/**/*.less', ['media']);
+    gulp.watch('public/media-styles/media-styles.css', ['minify-css-media']);
+    gulp.watch('public/styles/styles.css', ['minify-css-styles']);
     gulp.watch('frontend/**/*.html', ['html']);
     gulp.watch('frontend/**/*.js', ['js']);
 });

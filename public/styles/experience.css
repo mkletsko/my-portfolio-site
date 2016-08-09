@@ -1,30 +1,26 @@
 /* experience block */
 .experience {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
+  width: 100%;
   z-index: 2;
   position: relative;
-  top: -140px;
-  padding: 140px 0;
-  background: url("../images/experience.png") no-repeat;
-  background-size: 100% 100%;
+  top: -100px;
   color: rgba(18, 18, 18, 0.86);
+  /* experience-content */
+  /* END experience-content */
 }
-.experience .experience-caption {
+.experience .experience-top {
+  background-image: url("../images/background/ex-2.png");
+}
+.experience .experience-content {
+  background-image: url("../images/background/ex-1.png");
+  padding: 80px 0;
+}
+.experience .experience-content .experience-caption {
   width: 100%;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
-.experience .container-expirience {
+.experience .experience-content .container-expirience {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -45,9 +41,8 @@
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  padding: 0;
 }
-.experience .container-expirience .skills {
+.experience .experience-content .container-expirience .skills {
   width: 280px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -62,25 +57,29 @@
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 5%;
+  margin-bottom: 25px;
 }
-.experience .container-expirience .skills .img-skill {
+.experience .experience-content .container-expirience .skills .img-skill {
   display: block;
   max-width: 40%;
   max-height: 100%;
   height: auto;
 }
-.experience .container-expirience .skills .descrip-skill {
+.experience .experience-content .container-expirience .skills .descrip-skill {
+  width: 80%;
   margin-top: 10px;
   line-height: 1.5em;
   color: #515153;
   text-align: center;
 }
-.experience .container-expirience .p-skill {
+.experience .experience-content .container-expirience .p-skill {
   width: 100%;
   margin-top: 30px;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
+}
+.experience .experience-bottom {
+  background-image: url("../images/background/ex-3.png");
 }
 /* END experience block */
