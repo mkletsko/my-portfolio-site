@@ -476,8 +476,12 @@ body .works .works-content .portfolio .project .project-img img {
   width: 100%;
 }
 body .works .works-content .portfolio .project:hover {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
-          box-shadow: rgba(0, 0, 0, 0.8) 0 3px 8px -3px;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  -webkit-box-shadow: -4px 6px 23px -5px rgba(0, 0, 0, 0.75);
+          box-shadow: -4px 6px 23px -5px rgba(0, 0, 0, 0.75);
 }
 body .works .works-bottom {
   background-image: url("../images/background/work-3.png");
