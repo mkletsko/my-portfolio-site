@@ -25,11 +25,6 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
-.footer-site .footer-top h1 {
-  padding: 2px;
-  margin-bottom: 0;
-  color: #FFFFFF;
-}
 .footer-site .footer-content {
   background-image: url("../images/background/contacts-1.png");
   width: 100%;
@@ -48,6 +43,11 @@
   position: relative;
   /* me-social-network footer */
   /* END me-social-network footer */
+}
+.footer-site .footer-content h1 {
+  padding: 2px;
+  margin-bottom: 0;
+  color: #FFFFFF;
 }
 .footer-site .footer-content .feel-footer {
   margin-top: 35px;

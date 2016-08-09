@@ -230,8 +230,8 @@
   }
   section.about .about-content .about-container .foto-about {
     width: 100%;
-    height: 100%;
     max-width: 190px;
+    max-height: 290px;
     margin-bottom: 10px;
   }
   section.about .about-content .about-container .foto-about img {
@@ -270,7 +270,6 @@
     color: #FFFFFF;
   }
   footer.footer-site .footer-content {
-    background-image: url("../images/background/contacts-1.png");
     width: 100%;
     display: -webkit-box;
     display: -webkit-flex;
