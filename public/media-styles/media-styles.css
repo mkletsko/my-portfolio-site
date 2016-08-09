@@ -1,5 +1,56 @@
 /* END Extra small devices (phones, 320px) and 768px */
 @media (max-width: 767px) {
+  i.fa-2x {
+    font-size: 1.5em;
+  }
+  /* header */
+  header div.header-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    /* logo site style */
+    /* END logo site style */
+  }
+  header div.header-main .header-logo {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  header div.header-main .header-logo img {
+    margin-top: 10px;
+  }
+  header div.header-main nav {
+    width: 100%;
+    font-size: 13px;
+  }
+  header div.header-main nav .navigation {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  header div.header-main nav .navigation .nav-link {
+    min-width: 0px;
+  }
+  /* END header */
   /* header */
   header div.header-main {
     -webkit-box-orient: vertical;
@@ -56,100 +107,407 @@
   /* END style button download-cv */
   /* welcome block */
   section.welcome {
-    height: 385px;
+    /* welcome-content */
+    /* END welcome-content */
+  }
+  section.welcome .welcome-content {
     /* button for me style */
     /* social-offices */
     /* END social-offices */
   }
-  section.welcome h1 {
+  section.welcome .welcome-content h1 {
     font-size: 1.5em;
   }
-  section.welcome h2 {
+  section.welcome .welcome-content h2 {
     font-size: 1em;
   }
-  section.welcome .welcome-caption {
-    margin-top: 100px;
-    margin-bottom: 0;
+  section.welcome .welcome-content .welcome-caption {
+    margin-top: 130px;
+    margin-bottom: -20px;
   }
-  section.welcome .welcome-text {
-    margin-top: 0;
-    margin-bottom: 10px;
+  section.welcome .welcome-content .welcome-button {
+    width: 200px;
+    height: 40px;
+    margin: 0px 0;
   }
-  section.welcome .welcome-button {
-    width: 180px;
-    max-width: 340px;
-    max-height: 50px;
-    height: 30px;
-    margin-bottom: 3.6458%;
-    font-size: 12px;
+  section.welcome .welcome-content .social-offices {
+    margin: 30px 0 30px 0;
+    width: 300px;
+    /* group-social ul*/
+    /* END group-social ul*/
   }
-  section.welcome .social-offices {
-    width: 60%;
-    margin-bottom: 70px;
-  }
-  section.welcome .social-offices .group-social .network-icon {
-    font-size: 12px;
+  section.welcome .welcome-content .social-offices .group-social {
+    font-size: 15px;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
   }
   /* END welcome block */
   /* experience block */
   section.experience {
     position: relative;
     top: -135px;
-    padding: 140px 2%;
+    /* experience-content */
+    /* END experience-content */
   }
   section.experience .experience-caption {
     margin-bottom: 20px;
     font-size: 20px;
   }
-  section.experience .container-expirience .skills {
-    width: 120px;
-    font-size: 0.875em;
+  section.experience .experience-content {
+    padding: 30px 0;
   }
-  section.experience .container-expirience .p-skill {
+  section.experience .experience-content .experience-caption {
+    margin-bottom: 40px;
+  }
+  section.experience .experience-content .container-expirience {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+            align-content: flex-start;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  section.experience .experience-content .container-expirience .skills {
+    font-size: 0.875em;
+    width: 45%;
+  }
+  section.experience .experience-content .container-expirience .p-skill {
     font-size: 0.875em;
   }
   /* END experience block */
+  /* works block */
+  section.works {
+    top: -240px;
+    /* works-content */
+    /* END works-content */
+  }
+  section.works .works-content .portfolio .project {
+    margin-top: 20px;
+    width: 80%;
+  }
+  /* END works block */
+  /* about block */
+  section.about {
+    top: -350px;
+    /* about-content */
+    /* END about-content */
+  }
+  section.about .about-content {
+    padding: 0;
+    /* about-container */
+    /* END about-container */
+  }
+  section.about .about-content .cav-block {
+    display: none;
+  }
+  section.about .about-content .about-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center;
+    /* info me block */
+    /* foto me block */
+    /* END foto me block */
+  }
+  section.about .about-content .about-container .about-info {
+    font-size: 10pt;
+    line-height: 15pt;
+    margin-bottom: 10px;
+  }
+  section.about .about-content .about-container .foto-about {
+    width: 100%;
+    max-width: 190px;
+    max-height: 290px;
+    margin-bottom: 10px;
+  }
+  section.about .about-content .about-container .foto-about img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    float: right;
+  }
+  /* END about block */
+  /* footer */
+  footer.footer-site {
+    top: -450px;
+    /* footer-content */
+    /* END footer-content */
+  }
+  footer.footer-site .footer-top {
+    padding: 0;
+    background-image: url("../images/background/contacts-2.png");
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  footer.footer-site .footer-top h1 {
+    padding: 2px;
+    margin-bottom: 0;
+    color: #FFFFFF;
+  }
+  footer.footer-site .footer-content {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 15px;
+    position: relative;
+    /* me-social-network footer */
+    /* END me-social-network footer */
+  }
+  footer.footer-site .footer-content .feel-footer {
+    margin-top: 35px;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  footer.footer-site .footer-content .contacts-me {
+    width: 100%;
+    max-width: 660px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 40px;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  footer.footer-site .footer-content .contacts-me .me-email {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 15px;
+  }
+  footer.footer-site .footer-content .contacts-me .me-email .title-me-contact {
+    color: #FFFFFF;
+  }
+  footer.footer-site .footer-content .contacts-me .me-email .desc-me-contact {
+    font-size: 0.8em;
+    font-weight: lighter;
+    margin-top: 15px;
+  }
+  footer.footer-site .footer-content .me-social-network {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 50px;
+    /* copyright block */
+    /* END copyright block */
+    /* social-offices */
+    /* END social-offices */
+  }
+  footer.footer-site .footer-content .me-social-network .misha-2016 {
+    text-align: center;
+  }
+  footer.footer-site .footer-content .me-social-network .social-offices {
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5px;
+  }
+  footer.footer-site .footer-content .me-social-network .social-offices .group-social {
+    padding: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+  }
+  footer.footer-site .footer-content .me-social-network .social-offices .group-social .network-icon {
+    display: block;
+    margin-left: 0;
+  }
+  footer.footer-site .footer-content .me-social-network .social-offices .group-social .network-icon i {
+    font-size: 16pt;
+    color: #aaaaaa;
+  }
+  footer.footer-site .footer-content .me-social-network .social-offices .group-social .network-icon i:hover {
+    color: #FFFFFF;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+  /* END footer */
+  /* newsletter block style */
+  section.newsletter {
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(2, 2, 1, 0.83);
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+  section.newsletter .close-newsletter {
+    width: 30px;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 2%;
+  }
+  section.newsletter .block-newsletter {
+    width: 80%;
+    max-width: 800px;
+    margin: 60px auto 0;
+    text-align: center;
+  }
+  section.newsletter .block-newsletter .enter-me-letter {
+    font-size: 14pt;
+  }
 }
 /* END Extra small devices (phones, 320px) and 768px */
 /* Small devices (tablets, 768px and 992px) */
 @media only screen and (min-width: 767px) and (max-width: 992px) {
-  /* welcome block */
-  section.welcome {
+  body {
+    /* welcome block */
+    /* END welcome content */
+    /* experience block */
+    /* END experience block */
+    /* works block */
+    /* END works block */
+    /* about block */
+    /* END about block */
+    /* footer */
+    /* END footer */
+  }
+  body section.welcome {
+    /* welcome content */
+    /* END welcome block */
+  }
+  body section.welcome .welcome-content {
     /* button for me style */
     /* social-offices */
     /* END social-offices */
   }
-  section.welcome h1 {
+  body section.welcome .welcome-content h1 {
     font-size: 1.8em;
   }
-  section.welcome h2 {
+  body section.welcome .welcome-content h2 {
     font-size: 1.3em;
   }
-  section.welcome .welcome-caption {
+  body section.welcome .welcome-content .welcome-caption {
+    margin-top: 130px;
     margin-bottom: 0;
   }
-  section.welcome .welcome-button {
-    width: 27.7083%;
-    max-width: 340px;
-    max-height: 50px;
-    height: 29.4117%;
-    font-size: 17px;
+  body section.welcome .welcome-content .welcome-button {
+    width: 37.7083%;
+    height: 45px;
+    margin: 20px 0;
   }
-  section.welcome .social-offices {
+  body section.welcome .welcome-content .social-offices {
+    margin: 40px 0 0;
     width: 350px;
   }
-  section.welcome .social-offices .group-social .network-icon {
+  body section.welcome .welcome-content .social-offices .group-social .network-icon {
     font-size: 15px;
   }
-  /* END welcome block */
-  /* experience block */
-  section.experience {
+  body section.experience {
     top: -140px;
   }
-  section.experience .container-expirience .skills {
-    width: 200px;
+  body section.experience .experience-content .skills {
+    width: 120px;
   }
-  /* END experience block */
+  body section.works {
+    top: -240px;
+    /* works-content */
+    /* END works-content */
+  }
+  body section.works .works-content .portfolio .project {
+    margin-top: 20px;
+    width: 40%;
+  }
+  body .about {
+    top: -350px;
+    /* about-content */
+    /* END about-content */
+  }
+  body .about .about-content {
+    padding: 50px 2%;
+  }
+  body .about .about-bottom {
+    background-image: url("../images/background/about-3.png");
+  }
+  body .footer-site {
+    top: -450px;
+  }
+  /* END BODY */
 }
 /* END Small devices (tablets, 768px and 992px) */
 /* Medium devices (desktops, 992px and 1200px) */

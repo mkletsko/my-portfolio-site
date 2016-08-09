@@ -5,21 +5,32 @@
 @color-text2: #aaaaaa;
 
 body {
+  display: flex;
+  flex-flow: column nowrap;
   width: 100%; //1920px
-  height: 2000px;
   background-color: @color-text2;
   font-family: 'Open Sans', sans-serif;
   line-height: 22px;
   font-size: 14px;
   color: @color-text2;
-  display: flex;
-  flex-direction: column;
 
   h1 {
     font-size: 2em; //86pt
+    text-align: center;
   }
   h2 {
     font-size: 1.5em; //40pt
+    text-align: center;
+  }
+
+  .edge-content {
+    min-height: 100px;
+  }
+
+  .content-background {
+    width: 100%;
+    background: no-repeat center center;
+    background-size: 100% 100%;
   }
 
   .inside-padding {
@@ -29,8 +40,9 @@ body {
 
   .center-in-section {
     display: flex;
-    flex-direction: column;
+    flex-flow: column nowrap;
     align-items: center;
+    align-content: center;
   }
 
   .download-cv {
@@ -57,13 +69,15 @@ body {
     justify-content: center;
   }
 
-  @import "sprite.less";
   @import "animations.less";
   @import "page-loading.less";
   @import "header.less";
   @import "welcome.less";
   @import "experience.less";
   @import "work.less";
+  @import "about.less";
+  @import "footer.less";
+  @import "newsletter.less";
 
 }
 

@@ -1,27 +1,32 @@
 /* welcome block */
 .welcome {
   width: 100%;
-  background: url("../images/mac.png") no-repeat fixed center center;
-  background-size: cover;
+  background-color: #a4a7a4;
   text-align: center;
   color: white;
+  z-index: 2;
+  /* welcome-content block */
+  /* END welcome-content block */
+}
+.welcome .welcome-content {
+  width: 100%;
+  background-image: url("../images/background/head-1.png");
   /* button for me style */
   /* social-offices */
   /* END social-offices */
 }
-.welcome .welcome-caption {
+.welcome .welcome-content .welcome-caption {
   margin-top: 170px;
   margin-bottom: 0;
 }
-.welcome .welcome-text {
-  margin-top: 50px;
-  margin-bottom: 50px;
+.welcome .welcome-content .welcome-text {
+  margin: 50px 0;
 }
-.welcome .welcome-button {
+.welcome .welcome-content .welcome-button {
   width: 17.7083%;
   max-width: 340px;
   height: 60px;
-  margin-bottom: 50px;
+  margin: 50px 0;
   background-color: #5fd080;
   -webkit-border-radius: 5px;
           border-radius: 5px;
@@ -30,7 +35,7 @@
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.welcome .welcome-button:hover {
+.welcome .welcome-content .welcome-button:hover {
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
@@ -39,7 +44,7 @@
       -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
-.welcome .social-offices {
+.welcome .welcome-content .social-offices {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -49,12 +54,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 400px;
-  margin-bottom: 150px;
+  margin: 70px 0;
   overflow: hidden;
   /* group-social ul*/
   /* END group-social */
 }
-.welcome .social-offices .group-social {
+.welcome .welcome-content .social-offices .group-social {
   padding: 0;
   width: 100%;
   display: -webkit-box;
@@ -68,7 +73,7 @@
   /* social network icon */
   /* END social network icon */
 }
-.welcome .social-offices .group-social .network-icon {
+.welcome .welcome-content .social-offices .group-social .network-icon {
   list-style-type: none;
   font-size: 20px;
   /* social-icon element a*/
@@ -76,23 +81,26 @@
   /* separately icon style */
   /* END separately icon style */
 }
-.welcome .social-offices .group-social .network-icon .social-icon {
+.welcome .welcome-content .social-offices .group-social .network-icon .social-icon {
   color: white;
 }
-.welcome .social-offices .group-social .network-icon .social-icon:hover {
+.welcome .welcome-content .social-offices .group-social .network-icon .social-icon:hover {
   -webkit-transition: color ease .3s;
   transition: color ease .3s;
 }
-.welcome .social-offices .group-social .network-icon .icon-github:hover {
+.welcome .welcome-content .social-offices .group-social .network-icon .icon-github:hover {
   color: black;
 }
-.welcome .social-offices .group-social .network-icon .icon-facebook:hover {
+.welcome .welcome-content .social-offices .group-social .network-icon .icon-facebook:hover {
   color: #3b5998;
 }
-.welcome .social-offices .group-social .network-icon .icon-fa-linkedin:hover {
+.welcome .welcome-content .social-offices .group-social .network-icon .icon-fa-linkedin:hover {
   color: #0073b2;
 }
-.welcome .social-offices .group-social .network-icon .icon-vk:hover {
+.welcome .welcome-content .social-offices .group-social .network-icon .icon-vk:hover {
   color: #537599;
+}
+.welcome .welcome-bottom {
+  background-image: url("../images/background/head-2.png");
 }
 /* END welcome block */

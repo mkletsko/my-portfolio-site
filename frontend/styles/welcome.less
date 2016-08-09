@@ -1,98 +1,110 @@
 /* welcome block */
 .welcome {
   width: 100%;
-  background: url("../images/mac.png") no-repeat fixed center center;
-  background-size: cover;
+  background-color: #a4a7a4;
   text-align: center;
   color: white;
+  z-index: 2;
 
-  .welcome-caption {
-    margin-top: 170px;
-    margin-bottom: 0;
-  }
+  /* welcome-content block */
+  .welcome-content {
+    width: 100%;
+    background-image: url("../images/background/head-1.png");
 
-  .welcome-text {
-    margin-top: 50px; //70px
-    margin-bottom: 50px; //70px
-  }
-
-  /* button for me style */
-  .welcome-button {
-    width: 17.7083%; //340px
-    max-width: 340px;
-    height: 60px;
-    margin-bottom: 50px; //70px
-    background-color: #5fd080;
-    border-radius: 5px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-
-    &:hover {
-      transition-property: transform;
-      transform: scale(1.1);
+    .welcome-caption {
+      margin-top: 170px;
+      margin-bottom: 0;
     }
 
-  }
+    .welcome-text {
+      margin: 50px 0;
+    }
 
-  /* social-offices */
-  .social-offices {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    margin-bottom: 150px;
-    overflow: hidden;
+    /* button for me style */
+    .welcome-button {
+      width: 17.7083%; //340px
+      max-width: 340px;
+      height: 60px;
+      margin: 50px 0;
+      background-color: #5fd080;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease;
 
-    /* group-social ul*/
-    .group-social {
-      padding: 0;
-      width: 100%;
+      &:hover {
+        transition-property: transform;
+        transform: scale(1.1);
+      }
+
+    }
+
+    /* social-offices */
+    .social-offices {
       display: flex;
-      justify-content: space-between;
-      /* social network icon */
-      .network-icon {
-        list-style-type: none;
-        font-size: 20px;
+      justify-content: center;
+      width: 400px;
+      margin: 70px 0;
+      overflow: hidden;
 
-        /* social-icon element a*/
-        .social-icon {
-          color: white;
-          &:hover {
-            transition: color ease .3s;
+      /* group-social ul*/
+      .group-social {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        /* social network icon */
+        .network-icon {
+          list-style-type: none;
+          font-size: 20px;
+
+          /* social-icon element a*/
+          .social-icon {
+            color: white;
+            &:hover {
+              transition: color ease .3s;
+            }
+          }/* END social-icon element a */
+
+          /* separately icon style */
+          .icon-github {
+            &:hover {
+              color: black;
+            }
           }
-        }/* END social-icon element a */
 
-        /* separately icon style */
-        .icon-github {
-          &:hover {
-            color: black;
+          .icon-facebook {
+            &:hover {
+              color: #3b5998;
+            }
           }
-        }
 
-        .icon-facebook {
-          &:hover {
-            color: #3b5998;
+          .icon-fa-linkedin {
+            &:hover {
+              color: #0073b2;
+            }
           }
-        }
 
-        .icon-fa-linkedin {
-           &:hover {
-             color: #0073b2;
-           }
-         }
-
-        .icon-vk {
-          &:hover {
-            color: #537599;
+          .icon-vk {
+            &:hover {
+              color: #537599;
+            }
           }
-        }
-        /* END separately icon style */
+          /* END separately icon style */
 
-      }/* END social network icon */
+        }/* END social network icon */
 
-    }/* END group-social */
+      }/* END group-social */
 
-  }/* END social-offices */
+    }/* END social-offices */
+
+
+  }/* END welcome-content block */
+
+  .welcome-bottom {
+    background-image: url("../images/background/head-2.png");
+  }
 
 }
 /* END welcome block */

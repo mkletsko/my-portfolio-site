@@ -6,57 +6,130 @@
 and (min-width : @screen-sm-min)
 and (max-width : @screen-md-min) {
 
-  /* welcome block */
-  section.welcome {
-
-    h1 {
-      font-size: 1.8em; //86pt
-    }
-    h2 {
-      font-size: 1.3em; //40pt
-    }
-
-    .welcome-caption {
-      margin-bottom: 0;
-    }
+  body {
 
 
-    /* button for me style */
-    .welcome-button {
-      width: 27.7083%; //340px
-      max-width: 340px;
-      max-height: 50px;
-      height: 29.4117%; //100px
-      font-size: 17px;
-    }
+    /* welcome block */
+    section.welcome {
 
-    /* social-offices */
-    .social-offices {
-      width: 350px;
+      /* welcome content */
+      .welcome-content {
+        h1 {
+          font-size: 1.8em; //86pt
+        }
+        h2 {
+          font-size: 1.3em; //40pt
+        }
 
-      .group-social {
-        .network-icon {
-          font-size: 15px;
+        .welcome-caption {
+          margin-top: 130px;
+          margin-bottom: 0;
+        }
+
+
+        /* button for me style */
+        .welcome-button {
+          width: 37.7083%; //340px
+          height: 45px;
+          margin: 20px 0;
+        }
+
+        /* social-offices */
+        .social-offices {
+          margin: 40px 0 0;
+          width: 350px;
+
+          .group-social {
+            .network-icon {
+              font-size: 15px;
+            }
+          }
+
+        }/* END social-offices */
+
+      }/* END welcome block */
+
+    }/* END welcome content */
+
+
+
+
+    /* experience block */
+    section.experience {
+      top: -140px;
+
+
+      .experience-content {
+        .skills {
+          width: 120px;
+          //font-size: 0.875em;
+        }
+
+        .p-skill {
+          //font-size: 0.875em;
         }
       }
 
-    }/* END social-offices */
 
-  }/* END welcome block */
+    }/* END experience block */
 
 
-  /* experience block */
-  section.experience {
-    top: -140px;
-    .container-expirience {
+    /* works block */
+    section.works {
+      top: -240px;
 
-      .skills {
-        width: 200px;
+      /* works-content */
+      .works-content {
+
+        .portfolio {
+
+          .project {
+            margin-top: 20px;
+            width: 40%;
+          }
         }
 
+      }/* END works-content */
+
+
+    }/* END works block */
+
+
+
+
+    /* about block */
+    .about {
+      top: -350px;
+
+      /* about-content */
+      .about-content {
+        padding: 50px 2%;
+      }/* END about-content */
+
+      .about-bottom {
+        background-image: url("../images/background/about-3.png");
       }
 
-  }/* END experience block */
+
+    }/* END about block */
+
+
+
+
+    /* footer */
+    .footer-site {
+      top: -450px;
+    }
+    /* END footer */
+
+
+
+
+
+
+  }/* END BODY */
+
+
 
 
 }/* END Small devices (tablets, 768px and 992px) */

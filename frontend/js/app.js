@@ -1,11 +1,60 @@
-(function () {
+var App;
+App = (function () {
 
     var myAppVariables = {
-        headerMain : document.querySelector('.header-main'),
-        logoDark : document.querySelector('.logo-dark'),
-        logoClear : document.querySelector('.logo-clear'),
-        downloadCV : document.querySelector('.download-cv'),
+        /* propertys */
+        headerMain: document.querySelector('.header-main'),
+        logoDark: document.querySelector('.logo-dark'),
+        logoClear: document.querySelector('.logo-clear'),
+        downloadCV: document.querySelector('.download-cv'),
+
+        frontEventMethods: function (e) {
+
+            if (typeof e.stopPropagation === 'function') {
+                e.stopPropagation();
+            }
+            if (typeof  e.cancelBubble !== 'undefined') {
+                e.cancelBubble = true;
+            }
+            if (typeof e.preventDefault === 'function') {
+                e.preventDefault();
+            }
+            if (typeof  e.returnValue !== 'undefined') {
+                e.returnValue = false;
+            }
+
+        },
+
+
     };
+
+    /* preloader script */
+    (function () {
+        var hellopreloader = document.getElementById("preloader_preload");
+
+        function fadeOutnojquery(el) {
+            el.style.opacity = 1;
+
+            var interhellopreloader = setInterval(function () {
+
+                el.style.opacity = el.style.opacity - 0.05;
+
+                if (el.style.opacity <= 0.05) {
+                    clearInterval(interhellopreloader);
+                    hellopreloader.style.display = "none";
+                }
+
+            }, 16);
+        }
+
+        window.onload = function () {
+            setTimeout(function () {
+                fadeOutnojquery(hellopreloader);
+            }, 1000);
+        };
+    })();
+    /* END preloader script */
+
 
     var headerChange = function (e) {
         if (window.pageYOffset > 1) {
@@ -21,21 +70,9 @@
         }
 
 
-        if(typeof e.stopPropagation === 'function'){
-            e.stopPropagation();
-        }
-        if(typeof  e.cancelBubble !== 'undefined'){
-            e.cancelBubble = true;
-        }
-        if(typeof e.preventDefault === 'function'){
-            e.preventDefault();
-        }
-        if(typeof  e.returnValue !== 'undefined') {
-            e.returnValue = false;
-        }
+        myAppVariables.frontEventMethods(e);
 
     };
-
 
 
     /* create downloadCV button position */
@@ -56,35 +93,23 @@
 
         /* event create downloadCV button position*/
         var eventPositionCV = function (e) {
-            if(document.documentElement.clientWidth < 767) {
+            if (document.documentElement.clientWidth < 767) {
                 buttonCV.parentNode.removeChild(buttonCV);
                 headLogo.insertBefore(buttonCV, headLogo.children[2]);
             } else {
                 navMain.insertBefore(buttonCV, navMain.children[0]);
             }
 
-
-            if(typeof e.stopPropagation === 'function'){
-                e.stopPropagation();
-            }
-            if(typeof  e.cancelBubble !== 'undefined'){
-                e.cancelBubble = true;
-            }
-            if(typeof e.preventDefault === 'function'){
-                e.preventDefault();
-            }
-            if(typeof  e.returnValue !== 'undefined') {
-                e.returnValue = false;
-            }
+            myAppVariables.frontEventMethods(e);
 
         };
 
-        if (window.addEventListener){
+        if (window.addEventListener) {
             window.addEventListener('scroll', headerChange);
             window.addEventListener('resize', eventPositionCV);
-        } else if (window.attachEvent){
-            window.attachEvent('scroll', headerChange);
-            window.attachEvent('resize', eventPositionCV);
+        } else if (window.attachEvent) {
+            window.attachEvent('onscroll', headerChange);
+            window.attachEvent('onresize', eventPositionCV);
         } else {
             window.onscroll = headerChange;
             window.onresize = eventPositionCV;
@@ -95,91 +120,73 @@
     /* END  create downloadCV button position */
 
 
-
-
-    /* event carousel */
+    /* open/close window letter */
     (function () {
-        var carouselElem = document.querySelector('.carousel')
-            galleryUl = document.querySelector('.ul-gallery'),
-            galleryLi = document.querySelector('.li-gallery'),
-            buttonPrev = document.querySelector('.prev'),
-            buttonNext = document.querySelector('.next'),
-            width = 100,
-            count = 3,
-            position = 0;
 
-        /* click prev */
-        var clickPrev = function (e) {
-
-            position = Math.min(position + width * count, 0);
-            galleryUl.style.marginLeft = position + '%';
+        var buttonSend = document.getElementsByClassName('welcome-button')[0],
+            newsletterBlock = document.querySelector('.newsletter'),
+            closeNewsletter = document.querySelector('.close-newsletter');
 
 
-            if(typeof e.stopPropagation === 'function'){
-                e.stopPropagation();
-            }
-            if(typeof  e.cancelBubble !== 'undefined'){
-                e.cancelBubble = true;
-            }
-            if(typeof e.preventDefault === 'function'){
-                e.preventDefault();
-            }
-            if(typeof  e.returnValue !== 'undefined') {
-                e.returnValue = false;
+        var openLetterWindow = function (e) {
+
+            if (newsletterBlock.style.opacity == 0) {
+                newsletterBlock.style.opacity = 1;
+                newsletterBlock.style.zIndex = 1000;
             }
 
+            myAppVariables.frontEventMethods(e);
         };
-        /* END click prev */
 
-        /* click next */
-        var clickNext = function (e) {
+        var closeLetterWindow = function (e) {
 
-            position = Math.max(position - width * count, -width * (galleryLi.length - count));
-            galleryUl.style.marginLeft = position + '100';
-
-
-            if(typeof e.stopPropagation === 'function'){
-                e.stopPropagation();
-            }
-            if(typeof  e.cancelBubble !== 'undefined'){
-                e.cancelBubble = true;
-            }
-            if(typeof e.preventDefault === 'function'){
-                e.preventDefault();
-            }
-            if(typeof  e.returnValue !== 'undefined') {
-                e.returnValue = false;
+            if (newsletterBlock.style.opacity == 1) {
+                newsletterBlock.style.opacity = 0;
+                newsletterBlock.style.zIndex = 0;
             }
 
+            myAppVariables.frontEventMethods(e);
         };
-        /* END click next */
 
-        if (buttonPrev.addEventListener || buttonNext.addEventListener){
-            buttonPrev.addEventListener('click', clickPrev);
-            buttonNext.addEventListener('click', clickNext);
-        } else if (buttonPrev.attachEvent || buttonNext.attachEvent){
-            buttonPrev.attachEvent('click', clickPrev);
-            buttonNext.attachEvent('click', clickNext);
+        if (document.addEventListener) {
+            buttonSend.addEventListener('click', openLetterWindow);
+            closeNewsletter.addEventListener('click', closeLetterWindow);
+        } else if (document.attachEvent) {
+            buttonSend.attachEvent('onclick', openLetterWindow);
+            closeNewsletter.attachEvent('onclick', closeLetterWindow);
         } else {
-            buttonPrev.onclick = clickPrev;
-            buttonNext.onclick = clickNext;
-        };
-        /* END event create downloadCV button position*/
-
-
-        buttonPrev.onclick = function() {
-            // сдвиг вправо
-            // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-            position = Math.max(position - width * count, -width * (galleryLi.length - count));
-            galleryUl.style.marginLeft = position + 'px';
-        };
+            buttonSend.onclick = openLetterWindow;
+            closeNewsletter.onclick = closeLetterWindow;
+        }
 
     })();
-    /* END event carousel */
+    /* END open/close window letter */
 
 
+    /* scroll navigation site */
+    (function () {
+        var linkNav = document.querySelectorAll('[href^="#"]'),
+            V = 0.2;
 
+        for (var i = 0; i < linkNav.length; i++) {
+            linkNav[i].onclick = function(){
+                var w = window.pageYOffset,
+                    hash = this.href.replace(/[^#]*(.*)/, '$1'),
+                    t = document.querySelector(hash).getBoundingClientRect().top,
+                    start = null;
+                requestAnimationFrame(step);
+                function step(time) {
+                    if (start === null) start = time;
+                    var progress = time - start,
+                        r = (t < 0 ? Math.max(w - progress/V, w + t) : Math.min(w + progress/V, w + t));
+                    window.scrollTo(0,r);
+                    if (r != w + t) {requestAnimationFrame(step)} else {location.hash = hash}
+                }
+                return false;
+            }
+        }
+
+    })();
+    /* END scroll navigation site */
 
 })();
-
-
